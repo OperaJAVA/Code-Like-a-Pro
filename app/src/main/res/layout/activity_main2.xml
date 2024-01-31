@@ -16,7 +16,6 @@
         app:layout_constraintBottom_toBottomOf="@id/barrier"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         tools:ignore="ImageContrastCheck"
         tools:srcCompat="@sample/posts.json/data/authorAvatar" />
 
@@ -74,12 +73,53 @@
         android:autoLink="web"
         app:layout_constraintBottom_toBottomOf="@+id/avatar"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/published"
         app:layout_constraintVertical_bias="0.0"
         tools:text="@sample/posts.json/data/content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/downer_menu_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierMargin="@dimen/common_spacing_medium"
+        app:constraint_referenced_ids="content, attachment"
+        tools:ignore="UnknownId" />
+
+
+    <ImageButton
+        android:id="@+id/like"
+        style="@style/Widget.AppTheme.LikeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkable="true"
+        app:srcCompat="@drawable/ic_liked_24"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+        tools:layout_editor_absoluteX="-8dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+
+    <ImageButton
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_views_24"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/like"
+        app:layout_constraintTop_toTopOf="@+id/like"
+        app:srcCompat="@drawable/ic_share_24"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
+        tools:layout_editor_absoluteX="46dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
