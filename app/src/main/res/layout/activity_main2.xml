@@ -84,9 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom"
-        app:barrierMargin="@dimen/common_spacing_medium"
-        app:constraint_referenced_ids="content, attachment"
-        tools:ignore="UnknownId" />
+        app:barrierMargin="@dimen/common_spacing_medium" />
 
 
     <ImageButton
@@ -94,32 +92,62 @@
         style="@style/Widget.AppTheme.LikeCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@android:color/transparent"
         android:checkable="true"
+        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_liked_24"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
-        tools:layout_editor_absoluteX="-8dp"
-        tools:layout_editor_absoluteY="255dp" />
-
+        tools:layout_editor_absoluteY="245dp" />
 
     <ImageButton
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="40dp"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_views_24"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
-        tools:layout_editor_absoluteY="253dp" />
+        tools:layout_editor_absoluteY="249dp" />
 
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/ic_share_24"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="249dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="21dp"
+        android:layout_height="24dp"
+        android:text="10"
         app:layout_constraintBottom_toBottomOf="@+id/like"
         app:layout_constraintTop_toTopOf="@+id/like"
-        app:srcCompat="@drawable/ic_share_24"
-        tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
-        tools:layout_editor_absoluteX="46dp" />
+        tools:layout_editor_absoluteX="48dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="19dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="@+id/imageButton4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="21dp"
+        android:layout_height="24dp"
+        android:text="10"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        tools:layout_editor_absoluteX="343dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
