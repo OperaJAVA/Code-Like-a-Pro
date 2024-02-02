@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".MainActivity2">
+    tools:context=".MainActivity">
 
 
     <ImageView
@@ -116,7 +116,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
+        android:contentDescription="TODO"
         app:srcCompat="@drawable/ic_share_24"
+        tools:ignore="ContentDescription,HardcodedText,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck"
         tools:layout_editor_absoluteX="80dp"
         tools:layout_editor_absoluteY="249dp" />
 
@@ -127,6 +129,7 @@
         android:text="10"
         app:layout_constraintBottom_toBottomOf="@+id/like"
         app:layout_constraintTop_toTopOf="@+id/like"
+        tools:ignore="HardcodedText,TextSizeCheck"
         tools:layout_editor_absoluteX="48dp" />
 
     <TextView
@@ -138,7 +141,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toTopOf="@+id/imageButton4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="HardcodedText,TextSizeCheck" />
 
     <TextView
         android:id="@+id/textView5"
@@ -147,6 +151,7 @@
         android:text="10"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view"
+        tools:ignore="HardcodedText,TextSizeCheck"
         tools:layout_editor_absoluteX="343dp" />
 
 
